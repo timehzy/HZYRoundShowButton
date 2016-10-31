@@ -13,6 +13,8 @@
 @end
 
 @interface HZYRoundShowButton : UIView
++ (instancetype)roundShowButton:(NSArray<UIButton *> *)buttons andRadius:(CGFloat)radius andSize:(CGSize)size andPosition:(CGPoint)center;
+
 @property (weak, nonatomic) id<HZYRoundShowButtonDelegate> delegate;
 @property (assign, nonatomic) CGFloat arcLength;//展开的弧长 默认M_PI
 @property (assign, nonatomic) CGFloat startAngle;//起始角度 默认0
@@ -22,7 +24,5 @@
 @property (assign, nonatomic) CGFloat springWithDamping;
 @property (assign, nonatomic) BOOL clockWise;//动画方向
 @property (assign, nonatomic) BOOL roundButton;//是否圆形按钮, 若为圆形请确保初始化方法的size正确
-
-+ (instancetype)roundShowButton:(NSArray<UIButton *> *)buttons andRadius:(CGFloat)radius andSize:(CGSize)size andPosition:(CGPoint)center;
 @end
 
